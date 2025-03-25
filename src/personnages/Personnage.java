@@ -30,9 +30,7 @@ public class Personnage {
     	return objet;
     }
     
-    
-
-    
+   
 	public String getNom() {
 		return nom;
 	}
