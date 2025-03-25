@@ -1,34 +1,30 @@
 package elements;
 
 public class Porte{
-	private boolean ouverte;
+	private boolean etatPorte;
 	private Clef clef;
 
 	public boolean isOuverte() {
-		return ouverte;
+		return etatPorte;
 	}
 
-	public void setOuverte(boolean ouverte) {
-		this.ouverte = ouverte;
+	
+	public Porte() {
+		this.etatPorte = false;
 	}
 	
-	public Porte(Clef cle,Boolean ouverte) {
-		this.clef = cle;
-		if(ouverte == true) {
-			this.setOuverte(true);
-		}else {
-			this.setOuverte(false);
-		}
+	public void setClef(Clef clef) {
+		this.clef = clef;
 	}
 	
 	public void ouvrir(Clef cle) {
 		if(this.clef.equals(cle)){
-			this.setOuverte(true);
+			this.etatPorte = true;
 		}
 	}
 	
 	public void fermer() {
-		this.setOuverte(false);
+		this.etatPorte = false;
 	}
 	
 	public boolean equals(Porte porte) {
