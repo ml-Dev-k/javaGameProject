@@ -7,7 +7,7 @@ public class Conteneur extends Objet {
 
     public Conteneur(String nom, String nomImage, String description) {
         super(nom, nomImage, description);
-        this.contenus = new ArrayList<Objet>();
+        this.contenus = new ArrayList<Objet>(); 
     }
     
     public boolean estVide() {
