@@ -10,5 +10,9 @@ public class Objet {
         this.nomImage = nomImage;
         this.description = description;
     }
+    
+    public String getNom() {
+    	return this.nom;
+    }
 }
 
