@@ -9,7 +9,7 @@ public class Zone {
     private String cheminImg;
     private ArrayList<Objet> objets;
     private ArrayList<Personnage> personnages;
-    private HashMap<String, Zone> sorties; // Ex: "nord" -> autre zone
+    private HashMap<String, Zone> sorties; // Ex: "nord" -> autre zone !
     private ArrayList<Zone> sousZones;
 
     public Zone(String nom, String cheminImg) {

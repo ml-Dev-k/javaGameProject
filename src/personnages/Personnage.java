@@ -11,7 +11,7 @@ public class Personnage {
     private String urlImage;
     private String[] dialogue;
     private String description;
-    private ArrayList<Objet> listeObjet;
+    private ArrayList<Objet> listeObjet; //
     
     public Personnage(String nom, String urlImage, String[] dialogue, String description, ArrayList<Objet> listeObjet ) {
     	this.setNom(nom);

@@ -9,7 +9,7 @@ public class Joueur {
 	private ArrayList<Objet> inventaire;
 	private static final int capaciteInventaire = 5;
 	private int nbObjetInventaire;
-	private int nbDeplacement;
+	private int nbDeplacement; //
 	
 	
 	public Joueur(String nom) {
@@ -50,7 +50,7 @@ public class Joueur {
 	    } else {
 	        System.out.println("Inventaire :");
 	        for (Objet obj : inventaire) {
-	            System.out.println("- " + obj.getNom() + " : " + obj.getDescription());
+	            System.out.println("- " + obj.getNom() + " : " );
 	        }
 	    }
 	}
