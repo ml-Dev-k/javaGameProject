@@ -14,5 +14,8 @@ public class Objet {
     public String getNom() {
     	return this.nom;
     }
+    public String getDescription() {
+    	return this.description;
+    }
 }
 

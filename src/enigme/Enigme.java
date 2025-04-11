@@ -15,7 +15,9 @@ public class Enigme {
 		this.solution = solution;
 		this.nbEssai=0;
 		
+	
 	}
+	
 	
 	
 	

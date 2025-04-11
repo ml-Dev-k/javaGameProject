@@ -7,7 +7,7 @@ import elements.Objet;
 public class Joueur {
 	private String nom;
 	private ArrayList<Objet> inventaire;
-	private static final int capaciteInventaire = 0;
+	private static final int capaciteInventaire = 5;
 	private int nbObjetInventaire;
 	private int nbDeplacement;
 	
@@ -16,7 +16,7 @@ public class Joueur {
 		super();
 		this.inventaire = new ArrayList<Objet>(Joueur.capaciteInventaire);
 		this.nbDeplacement = 0;
-		this.nbObjetInventaire=0;
+		this.nbObjetInventaire=this.inventaire.size();
 	}
 
 	public int getNbDeplacement() {
@@ -28,8 +28,8 @@ public class Joueur {
 	}
 	
 	// Gérer l'implémentation du nombre de déplacement
-	public int déplacer() {  
-		return this.nbDeplacement+1;
+	public void déplacer() {  
+		this.nbDeplacement++;
 	}
 	
 	// Ajout objets dans l'inventaire:  Exception INVENTAIRE PLEIN A GERER
@@ -43,6 +43,17 @@ public class Joueur {
 	public void retirerInventaire(Objet objet) {
 		this.inventaire.remove(objet);
 			}
+	
+	public void afficherInventaire() {
+	    if (inventaire.isEmpty()) {
+	        System.out.println("Inventaire vide.");
+	    } else {
+	        System.out.println("Inventaire :");
+	        for (Objet obj : inventaire) {
+	            System.out.println("- " + obj.getNom() + " : " + obj.getDescription());
+	        }
+	    }
+	}
 			
 	
 	
