@@ -1,42 +1,58 @@
 package enigmes;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Enigme {
-	private String nom;
-	private String description;
-	private ArrayList<String> solutions;
+	protected String description;
+	public String solution;
 	public static final int nbEssaimax=3;
-	private int nbEssai;
+	protected int nbEssai;
 	
-	
-	public Enigme(String nom, String description) {
-		this.nom = nom;
+	public Enigme() {
+		// le constructeur par défaut
+	}
+	public Enigme(String description) {
 		this.description = description;
 		this.nbEssai=0;
 	}
-	
-	public void setSolution(String solutionPossible) {
-		this.solutions.add(solutionPossible);
+	public Enigme(String description, String solution) {
+		this.description = description;
+		this.solution = solution;
+		this.nbEssai = 0;
 	}
 	
-	public boolean repondre(String réponse) {
-		if(this.solutions.contains(réponse)) {
-			return true;
-		}else {
+	public boolean repondre(String reponse) {
+		reponse = reponse.toLowerCase();
+		String solution = this.solution.toLowerCase();
+		if(solution.compareTo(reponse) != 0) {
+			this.nbEssai += 1;
 			return false;
+		}else {
+			return true;
 		}
 	}
 	
-	public String toString() {
-		String str = "Nom : " + this.nom;
-		str += "Description : \n" + this.description ;
-		return str;
-	}
+    @SuppressWarnings("resource")
+	public String essayer(){
+    	Scanner keyboard = new Scanner(System.in);
+    	String reponse = keyboard.nextLine();
+    	return reponse;
+    }
 	
+	
+	public String toString() {
+		return "'" + this.description + "'";
+	}
 	public void affiche() {
 		System.out.println(this);
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 
